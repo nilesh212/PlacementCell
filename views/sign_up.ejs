@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="<%= assetPath('css/sign_up_css.css')%>" />
+
+<form action="/employees/create-employee" class="sign-up-form" method="post">
+  <h3>Sign Up</h3>
+  <input
+    type="number"
+    name="emp_id"
+    id=""
+    placeholder="Enter Employee ID"
+    required
+  />
+  <input type="text" name="emp_name" id="" placeholder="Enter Name" required />
+  <input type="email" name="emp_email" placeholder="Enter Email Id" required />
+  <input type="password" name="pass" placeholder="Enter Password" required />
+  <input
+    type="password"
+    name="confirmPass"
+    placeholder="Confirm Password"
+    required
+  />
+  <button type="submit" class="sign-up-btn">Submit</button>
+</form>

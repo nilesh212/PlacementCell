@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="<%= assetPath('css/interview_list_css.css')%>" />
+
+<div class="interview-list-container">
+  <h2>List of Interviews</h2>
+  <ol type="1">
+    <%for(let interview of interviews){%>
+    <li class="li-name">
+      <a href="/interviews/information/<%= interview.id%>">
+        <%= interview.company%>
+      </a>
+      &ensp; <%= interview.date%>
+    </li>
+    <%}%>
+  </ol>
+</div>
+
+<%if(locals.emp){%>
+<form action="/interviews/create" class="interview-form" method="post">
+  <h3>Add interview</h3>
+  <input
+    type="text"
+    name="company"
+    class="interview-company"
+    placeholder="Enter Company's Name"
+    required
+  />
+  <input type="date" name="date" class="interview-date" required />
+  <br />
+  <select name="students" class="interview-students" multiple="multiple">
+    <option value="" disabled>Allocate Students</option>
+    <%for(let student of students){%>
+    <option value="<%= student.name%>"><%= student.name%></option>
+    <%}%>
+  </select>
+  <br />
+  <input type="submit" class="submit-interview" />
+</form>
+<%}%>

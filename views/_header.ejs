@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="<%= assetPath('css/headerstyle.css')%>" />
+
+<header>
+  <div class="home-name">
+    <a href="/">Placement Cell</a>
+  </div>
+
+  <div class="employee-name">
+    <%if(!locals.emp){%>
+    <a href="/employees/sign-in">Sign In</a>
+    <a href="/employees/sign-up">Sign Up</a>
+    <%}else{%>
+    <b><%= emp.name%></b>
+    <a href="/employees/sign-out">Sign Out</a>
+
+    <%}%>
+  </div>
+</header>

@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="<%= assetPath('css/interview_info_css.css')%>" />
+
+<div class="interview-info">
+  <h1>Interview Information</h1>
+  <h4>
+    Company Name: <span class="company-name"><%= interview.company%></span>
+  </h4>
+  <h4>
+    Interview To be held on:
+    <span class="interview-date"><%= interview.date%></span>
+  </h4>
+</div>
+
+<div class="interview-student">
+  <h3>Students appearing in the interview</h3>
+  <ol type="1" class="list">
+    <%for(let i in interview.students){%>
+    <li>
+      <span class="student-name"><%=interview.students[i].name%></span>
+      &ensp;&ensp; <b>Result: </b
+      ><span class="display-result"><%= results[i].result%></span
+      ><%if(locals.emp){%>
+      <form
+        action="/interviews/update-result"
+        method="post"
+        class="result-form"
+      >
+        <b>Update Result:</b>
+        <select
+          name="status"
+          value="<%= results[i].result%>"
+          data-id="<%=results[i].id%>"
+          id="result"
+        >
+          <option value="<%= results[i].result%>" default>
+            <%= results[i].result%>
+          </option>
+          <option value="Pass" class="result-pass">Pass</option>
+          <option value="Fail">Fail</option>
+          <option value="On Hold">On Hold</option>
+          <option value="Not Attempted">Not Attempted</option>
+        </select>
+        <input type="submit" value="Save" class="save-result" />
+      </form>
+      <br />
+      <%}%>
+    </li>
+    <%}%>
+  </ol>
+</div>
+
+<script src="<%= assetPath('js/interview_info_js.js')%>"></script>

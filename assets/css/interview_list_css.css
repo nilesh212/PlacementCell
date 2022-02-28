@@ -1,0 +1,72 @@
+main {
+  display: flex;
+  justify-content: center;
+  padding-left: 5px;
+}
+
+.interview-list-container {
+  width: 40%;
+}
+
+.interview-list-container > h2 {
+  color: #ff0a54;
+  font-size: 2vw;
+}
+
+.interview-form {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+  /* border: 2px solid black; */
+}
+
+.interview-form > h3 {
+  width: 100%;
+  font-size: 2vw;
+  color: #f94144;
+}
+
+.interview-company,
+.interview-date {
+  width: 45%;
+  height: 2vw;
+  font-size: 1vw;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 2px solid #abc4ff;
+  outline-color: rgb(108, 108, 255);
+  outline-width: 1px;
+  padding-left: 5px;
+}
+
+.interview-students {
+  width: 98%;
+  height: 6vw;
+  text-align: center;
+  font-size: 1vw;
+  border: 2px solid #abc4ff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.submit-interview {
+  width: 30%;
+  height: 2vw;
+  margin: auto;
+  color: white;
+  font-size: 1.2vw;
+  background-color: #1c89f2;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.submit-interview:hover {
+  box-shadow: 0px 0px 10px 5px #65b0f7;
+}
+
+.li-name > a {
+  color: #ff5c8a;
+}

@@ -1,0 +1,1 @@
+.home-container,main{display:flex;justify-content:center;align-items:center}.home-container{flex-direction:column}h3{font-size:1.5vw;margin:20px}.download-btn{width:8vw;height:2vw;font-size:1.1vw;border:none;cursor:pointer;background-color:#dd1c5e;color:#fff;border-radius:5px}.download-btn:hover{box-shadow:0 0 10px 4px #e26792}

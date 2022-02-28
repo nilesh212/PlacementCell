@@ -1,0 +1,93 @@
+<link rel="stylesheet" href="<%= assetPath('css/students_list_css.css')%>" />
+
+<div class="students-list-container">
+  <h2>List of Students</h2>
+
+  <ol type="1">
+    <%for(let student of students){%>
+    <li class="li-name">
+      <a href="/students/information?name=<%= student.name%>"
+        ><%= student.name%></a
+      >
+    </li>
+    <%}%>
+  </ol>
+</div>
+
+<%if(locals.emp){%>
+<form action="/students/create" class="students-form" method="post">
+  <h3>Add Student</h3>
+
+  <input
+    type="text"
+    name="student_id"
+    placeholder="Enter Student's ID"
+    class="student-id"
+    required
+  />
+  <input
+    type="text"
+    name="name"
+    placeholder="Enter Student's name"
+    class="student-name"
+    required
+  />
+  <input
+    type="email"
+    name="email"
+    placeholder="Enter Student's EmailId"
+    class="student-email"
+    required
+  />
+  <input
+    type="text"
+    name="college"
+    placeholder="Enter Student's College Name"
+    class="student-college"
+    required
+  />
+  <select name="batch" id="" class="student-batch" required>
+    <option value="" disabled>Batch</option>
+    <option value="First Year">First Year</option>
+    <option value="Second Year">Second Year</option>
+    <option value="Third Year">Third Year</option>
+    <option value="Fourth Year">Fourth Year</option>
+    <option value="Graduated">Graduated</option>
+  </select>
+  <select name="status" id="" class="student-status" required>
+    <option value="" disabled>Status</option>
+    <option value="Placed">Placed</option>
+    <option value="Not Placed">Not Placed</option>
+  </select>
+  <input
+    type="text"
+    name="score"
+    placeholder="Enter Student's Score (CGPA/PERCENTAGE)"
+    class="student-score"
+    required
+  />
+  <input
+    type="text"
+    name="DSAScore"
+    placeholder="Enter Student's DSA Score"
+    class="student-DSAScore"
+    required
+  />
+  <input
+    type="text"
+    name="WebDScore"
+    placeholder="Enter Student's WebD Score"
+    class="student-WebDScore"
+    required
+  />
+  <input
+    type="text"
+    name="ReactScore"
+    placeholder="Enter Student's React Score"
+    class="student-ReactScore"
+    required
+  />
+
+  <button type="submit" class="submit-student">Submit</button>
+</form>
+<%}%>

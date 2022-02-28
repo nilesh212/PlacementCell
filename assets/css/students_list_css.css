@@ -1,0 +1,105 @@
+main {
+  display: flex;
+  justify-content: center;
+  padding-left: 5px;
+}
+
+.students-list-container {
+  width: 40%;
+}
+
+.students-list-container > h2 {
+  color: #ff0a54;
+  font-size: 2vw;
+}
+
+.students-form {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+  /* border: 2px solid black; */
+}
+.students-form > h3 {
+  width: 100%;
+  font-size: 2vw;
+  color: #f94144;
+}
+
+.students-form > input {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 2px solid #abc4ff;
+  outline-color: rgb(108, 108, 255);
+  outline-width: 1px;
+  padding-left: 5px;
+}
+
+.students-form > select {
+  border: 2px solid #abc4ff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  /* border: none; */
+}
+
+.student-id {
+  width: 30%;
+  height: 2vw;
+}
+
+.student-name {
+  width: 40%;
+  height: 2vw;
+}
+
+.student-email {
+  width: 99%;
+  height: 2vw;
+
+  font-size: 1vw;
+}
+
+.student-college {
+  width: 99%;
+  height: 2vw;
+  font-size: 1vw;
+}
+
+.student-id,
+.student-name,
+.student-score,
+.student-DSAScore,
+.student-WebDScore,
+.student-ReactScore {
+  width: 45%;
+  height: 2vw;
+  font-size: 1vw;
+}
+
+.student-batch,
+.student-status {
+  width: 48%;
+  height: 2.5vw;
+  font-size: 1vw;
+}
+
+.submit-student {
+  width: 25%;
+  height: 2.5vw;
+  margin: auto;
+  color: white;
+  font-size: 1.2vw;
+  background-color: #1c89f2;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.submit-student:hover {
+  box-shadow: 0px 0px 10px 5px #65b0f7;
+}
+
+.li-name > a {
+  color: #ff5c8a;
+}

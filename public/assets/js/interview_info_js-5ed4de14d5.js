@@ -1,0 +1,1 @@
+{let e=$(".result-form");for(let t=0;t<e.length;t++)$(e[t].children[2]).on("click",(function(l){l.preventDefault(),$.ajax({type:"post",url:`${e[t].action}/?id=${$(e[t].children[1]).attr("data-id")}&result=${e[t].children[1].value}`,success:function(e){let l=$("li");$(".display-result",l[t]).html(e.result)},error:function(e){console.log(e.responseText)}})}))}

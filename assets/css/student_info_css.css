@@ -1,0 +1,23 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main > span {
+  font-size: 1.5vw;
+  margin-bottom: 10px;
+  color: rgb(59, 147, 199);
+  font-style: italic;
+}
+
+main > h1 {
+  color: deeppink;
+}
+
+main > span > b {
+  color: black;
+  font-style: normal;
+}

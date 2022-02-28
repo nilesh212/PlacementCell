@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="<%= assetPath('css/sign_in_css.css')%>" />
+
+<form action="/employees/create-session" class="sign-in-form" method="post">
+  <h3>LogIn</h3>
+  <input
+    type="number"
+    name="emp_id"
+    class="emp-id"
+    placeholder="Enter Employee ID"
+    required
+  />
+
+  <input
+    type="password"
+    name="password"
+    class="emp-pass"
+    placeholder="Enter Password"
+    required
+  />
+  <input type="submit" name="Submit" class="login-btn" />
+</form>
